@@ -6,6 +6,9 @@ After=multi-user.target
 Type=simple
 ExecStart=/usr/bin/python /etc/GPIOShortcuts/service.py
 Restart=on-abort
+Environment="DISPLAY=:0"
+Environment="XAUTHORITY=/home/pi/.Xauthority"
 
 [Install]
 WantedBy=multi-user.target
+WantedBy=graphical.target

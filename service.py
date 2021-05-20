@@ -1,5 +1,5 @@
 from gpiozero import Button
-from pyautogui import hotkey
+from pyautogui import hotkey, press, click
 from time import sleep
 
 def isint(n):
@@ -21,25 +21,36 @@ def line_is_valid(line):
     if len(line) > 0:
         if line[0] != "#":
             lst = line.split(",")
-            if len(lst) > 1:
+            if len(lst) > 2:
                 lst = [el.replace(" ", "") for el in lst]
-                pin_number, key_tuple = lst[0], tuple(lst[1:])
-                if isint(pin_number) and istuple(key_tuple):
-                    return int(pin_number), tuple(key_tuple)
-    return None, None
+                command_type, pin_number, key_tuple = lst[0], tuple(lst[1:])
+                if isint(pin_number) and istuple(key_tuple) and (command_type == "sequence" or command_type == "hotkey"):
+                    return command_type, int(pin_number), tuple(key_tuple)
+    return None, None, None
 
 shortcuts = []
 
 with open("/etc/GPIOShortcuts/config.txt") as f:
     for line in f:
-        pin_number, key_tuple = line_is_valid(line)
+        command_type, pin_number, key_tuple = line_is_valid(line)
         if pin_number != None:
-            shortcuts.append((Button(pin_number), key_tuple))
+            shortcuts.append((command_type, Button(pin_number), key_tuple))
 
 while True:
     for s in shortcuts:
-        button, args = s
+        command_type, button, args = s
         if button.is_pressed:
-            hotkey(*args)
+            if command_type == "hotkey":
+                hotkey(*args)
+            else:
+                keys = list(args)
+                for k in keys:
+                    if k == "leftclick":
+                        click(x = 200, y = 200)
+                    elif k == "rightclick":
+                        click(x = 200, y = 200, button = "right")
+                    else:
+                        press(k)
+
             sleep(0.5)
     sleep(0.05)

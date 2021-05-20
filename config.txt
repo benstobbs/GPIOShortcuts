@@ -1,9 +1,15 @@
 # GPIOShortcuts Config File
 
-# Format: GPIO pin number, "key to be pressed", "another key to be pressed", ...
+# Format: hotkey/sequence, GPIO pin number, "key to be pressed", "another key to be pressed", ...
+
+# hotkey: keys are pressed together (shortcut)
+# sequence: keys are pressed sequentially
+
+# NB: leftclick and rightclick can only be used in a sequence
 
 # Example:
 # 17, ctrl, =
 
-17, ctrl, =
-27, ctrl, -
+hotkey, 17, ctrl, =
+hotkey, 27, ctrl, -
+sequence, rightclick, down, down, down, down, return

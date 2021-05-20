@@ -23,7 +23,7 @@ def line_is_valid(line):
             lst = line.split(",")
             if len(lst) > 2:
                 lst = [el.replace(" ", "") for el in lst]
-                command_type, pin_number, key_tuple = lst[0], tuple(lst[1:])
+                command_type, pin_number, key_tuple = lst[0], lst[1], tuple(lst[2:])
                 if isint(pin_number) and istuple(key_tuple) and (command_type == "sequence" or command_type == "hotkey"):
                     return command_type, int(pin_number), tuple(key_tuple)
     return None, None, None

@@ -30,7 +30,7 @@ def line_is_valid(line):
 
 shortcuts = []
 
-with open("config.txt") as f:
+with open("/etc/GPIOShortcuts/config.txt") as f:
     for line in f:
         pin_number, key_tuple = line_is_valid(line)
         if pin_number != None:

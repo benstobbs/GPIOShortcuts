@@ -1,5 +1,5 @@
 [Unit]
-Description=Maps GPIO key presses to keyboard shortcuts.
+Description=GPIOShortcuts
 After=multi-user.target
 
 [Service]

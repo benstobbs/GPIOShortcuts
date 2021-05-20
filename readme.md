@@ -23,3 +23,6 @@ A Raspberry Pi service to permanently map GPIO button presses to keyboard shortc
     `sudo systemctl status GPIOShortcuts`
 
 5. Done!
+
+## Updating configuration
+To update the configuration, just change the cloned `config.txt` and re-run `config.sh` .

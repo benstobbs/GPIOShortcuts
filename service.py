@@ -51,7 +51,7 @@ while True:
                         click(x = 200, y = 200, button = "right")
                     else:
                         press(k)
-                    sleep(0.05)
+                    sleep(0.1)
 
             sleep(0.5)
     sleep(0.05)

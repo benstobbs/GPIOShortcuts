@@ -11,6 +11,8 @@ else
     fi
 fi
 
+sudo pip install pyautogui
+
 sudo mkdir /etc/GPIOShortcuts
 sudo cp config.txt /etc/GPIOShortcuts/
 sudo cp service.py /etc/GPIOShortcuts/
@@ -21,3 +23,5 @@ sudo chmod +x /etc/GPIOShortcuts/service.py
 sudo systemctl daemon-reload
 sudo systemctl enable GPIOShortcuts.service
 sudo systemctl start GPIOShortcuts.service
+
+echo "Done"

@@ -4,7 +4,7 @@ After=multi-user.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3 /etc/GPIOShortcuts/service.py
+ExecStart=/usr/bin/python /etc/GPIOShortcuts/service.py
 Restart=on-abort
 
 [Install]

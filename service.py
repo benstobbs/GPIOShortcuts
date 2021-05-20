@@ -1,5 +1,5 @@
 from gpiozero import Button
-from pyautogui import Hotkey
+from pyautogui import hotkey
 from time import sleep
 
 def isint(n):

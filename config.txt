@@ -10,6 +10,22 @@
 # Example:
 # 17, ctrl, =
 
+### OpenCPN keybinds below. Remove for other applications.
+
+# Zoom in
 hotkey, 17, ctrl, =
+# Zoom out
 hotkey, 27, ctrl, -
+# Goto
 sequence, 22, rightclick, down, down, down, down, return
+# Arrow keys
+sequence, 23, left
+sequence, 24, right
+sequence, 10, up
+sequence, 1, down
+# Night mode
+sequence, 04, f5
+# Auto-follow
+sequence, 18, f2
+# MOB
+hotkey, 0, ctrl, space

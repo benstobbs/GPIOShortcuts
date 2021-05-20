@@ -1,0 +1,9 @@
+# GPIOShortcuts Config File
+
+# Format: GPIO pin number, "key to be pressed", "another key to be pressed", ...
+
+# Example:
+# 17, ctrl, =
+
+17, ctrl, =
+27, ctrl, -

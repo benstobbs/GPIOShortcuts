@@ -12,4 +12,4 @@
 
 hotkey, 17, ctrl, =
 hotkey, 27, ctrl, -
-sequence, rightclick, down, down, down, down, return
+sequence, 22, rightclick, down, down, down, down, return

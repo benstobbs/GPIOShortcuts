@@ -16,8 +16,6 @@
 hotkey, 17, ctrl, =
 # Zoom out
 hotkey, 27, ctrl, -
-# Goto
-sequence, 22, rightclick, down, down, down, down, down, down, down, return
 # Arrow keys
 sequence, 23, left
 sequence, 24, right

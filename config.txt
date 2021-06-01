@@ -13,17 +13,17 @@
 ### OpenCPN keybinds below. Remove for other applications.
 
 # Zoom in
-hotkey, 17, ctrl, =
+hotkey, 24, ctrl, =
 # Zoom out
-hotkey, 27, ctrl, -
+hotkey, 10, ctrl, -
 # Arrow keys
-sequence, 23, left
-sequence, 24, right
-sequence, 10, up
-sequence, 1, down
+sequence, 22, left
+sequence, 27, right
+sequence, 23, up
+sequence, 18, down
 # Night mode
-sequence, 04, f5
+sequence, 11, f5
 # Auto-follow
-sequence, 18, f2
+sequence, 25, f2
 # MOB
-hotkey, 0, ctrl, space
+hotkey, 17, ctrl, space

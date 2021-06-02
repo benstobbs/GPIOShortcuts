@@ -4,7 +4,7 @@ if [[ "$EUID" = 0 ]]; then
 else
     sudo -k
     if sudo true; then
-        echo "Correct password"
+        echo "Sucessfully got root"
     else
         echo "Wrong password"
         exit 1

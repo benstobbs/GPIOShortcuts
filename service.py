@@ -46,12 +46,12 @@ while True:
                 keys = list(args)
                 for k in keys:
                     if k == "leftclick":
-                        click(x = 200, y = 200)
+                        click()
                     elif k == "rightclick":
-                        click(x = 200, y = 200, button = "right")
+                        click(button = "right")
                     else:
                         press(k)
-                    sleep(0.1)
+                    sleep(0.15)
 
             sleep(0.5)
     sleep(0.05)

@@ -22,6 +22,7 @@ sudo chmod +x /etc/GPIOShortcuts/service.py
 
 sudo systemctl daemon-reload
 sudo systemctl enable GPIOShortcuts.service
+sudo systemctl stop GPIOShortcuts.service
 sudo systemctl start GPIOShortcuts.service
 
 echo "Done"

@@ -11,7 +11,10 @@
 # 17, ctrl, =
 
 ### OpenCPN keybinds below. Remove for other applications.
-
+# Left click
+sequence, 15, leftclick
+# Right click
+sequence, 9, rightclick
 # Zoom in
 hotkey, 17, ctrl, =
 # Zoom out

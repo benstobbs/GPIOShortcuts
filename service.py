@@ -1,6 +1,7 @@
 from gpiozero import Button
 from pyautogui import hotkey, press, click
 from time import sleep
+import pynput
 
 def isint(n):
     try:
@@ -36,6 +37,8 @@ with open("/etc/GPIOShortcuts/config.txt") as f:
         if pin_number != None:
             shortcuts.append((command_type, Button(pin_number), key_tuple))
 
+keyboard = pynput.keyboard.Controller()
+
 while True:
     for s in shortcuts:
         command_type, button, args = s
@@ -49,6 +52,14 @@ while True:
                         click()
                     elif k == "rightclick":
                         click(button = "right")
+                    elif k == "right":
+                        keyboard.press(pynput.keyboard.Key.right)
+                    elif k == "left":
+                        keyboard.press(pynput.keyboard.Key.left)
+                    elif k == "up":
+                        keyboard.press(pynput.keyboard.Key.up)
+                    elif k == "down":
+                        keyboard.press(pynput.keyboard.Key.down)
                     else:
                         press(k)
                     sleep(0.15)

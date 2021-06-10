@@ -12,6 +12,7 @@ else
 fi
 
 sudo pip install pyautogui
+sudo pip install pynput
 
 sudo mkdir /etc/GPIOShortcuts
 sudo cp config.txt /etc/GPIOShortcuts/

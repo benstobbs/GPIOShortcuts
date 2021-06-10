@@ -54,12 +54,20 @@ while True:
                         click(button = "right")
                     elif k == "right":
                         keyboard.press(pynput.keyboard.Key.right)
+                        sleep(0.05)
+                        keyboard.release(pynput.keyboard.Key.right)
                     elif k == "left":
                         keyboard.press(pynput.keyboard.Key.left)
+                        sleep(0.05)
+                        keyboard.release(pynput.keyboard.Key.left)
                     elif k == "up":
                         keyboard.press(pynput.keyboard.Key.up)
+                        sleep(0.05)
+                        keyboard.release(pynput.keyboard.Key.up)
                     elif k == "down":
                         keyboard.press(pynput.keyboard.Key.down)
+                        sleep(0.05)
+                        keyboard.release(pynput.keyboard.Key.down)
                     else:
                         press(k)
                     sleep(0.15)
